@@ -24,3 +24,58 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+
+
+
+
+.image {
+    height: 100%;
+    background-size: cover;
+    width: 100%;
+    bottom: 0%;
+    top: 0px;
+    position: relative;
+    --background: url('/assets/image/simple-background-backgrounds-passion-simple-1-5c9b95c3a34f9.png');
+    
+  }
+
+/* Small devices (portrait tablets and large phones, 540px and up) */
+@mixin Small {
+    @media only screen and(max-width: 576px){
+        @content;
+    }
+}
+/* Medium devices (landscape tablets, 720px and up) */
+@mixin medium {
+    @media only screen and (max-width:768px){
+        @content; 
+    }
+}
+@mixin medium-min {
+    @media only screen and (min-width:768px){
+        @content; 
+    }
+}
+/* Large devices (laptops/desktops, 960px and up) */
+@mixin large {
+    @media only screen and (max-width: 992px)  { //max
+        @content;
+    }
+}
+@mixin large-min {
+    @media only screen and (min-width: 992px)  { //max
+        @content;
+    }
+}
+@mixin exLarge{
+    @media only screen and(max-width: 1200px){
+        @content;
+    }
+}
+/* Extra large devices (large laptops and desktops, 1140px and up) */
+@mixin extraLarge{
+    @media only screen and(min-width: 1200px){
+        @content;
+    }
+}

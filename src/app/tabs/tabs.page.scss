@@ -1,1 +1,11 @@
 
+ion-tab-button{
+    --background-focused: #ab42d4;
+    --color-selected: #ab42d4;
+   
+}
+
+.tab-selected{
+  border-bottom: 5px;
+  border-style: none none solid none;
+}
