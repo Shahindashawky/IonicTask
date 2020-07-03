@@ -52,4 +52,8 @@ export class LoginPage implements OnInit {
     
 
   }
+  loginWithFacebook(){
+    this.authService.lwf().catch(error => this.errorMsg = error.message);
+    this.loggedin=true;  
+  }
 }

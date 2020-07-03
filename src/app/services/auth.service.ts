@@ -48,4 +48,11 @@ export class AuthService {
 
 
 }
+lwf(){
+  return this.afAuth.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider())
+  .then((res) => {
+    this.authState = res;
+    this.router.navigate(['/home/tab1']);
+ }) 
+}
 }
