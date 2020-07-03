@@ -10,11 +10,11 @@
       <ion-row>
         <ion-col>
           <div class="head">
-            <p>User Login</p>
+            <img src="/assets/image/asset1.png" class="logimg" alt="">
+            <h1>tindo</h1>
+            <p>Unlock the full Experience</p>
           </div>
           <div>
-
-
             <ion-item>
               <ion-input name="email" type="email" placeholder="your@email.com" [(ngModel)]="email" required>
               </ion-input>
@@ -26,29 +26,29 @@
 
           </div>
           <div class="cen">
-            <ion-button size="large" type="submit" [disabled]="form.invalid" expand="block" (click)="signUp()">SignUp
+            <ion-button class="btn" size="large" type="submit" [disabled]="form.invalid" expand="block"
+              (click)="signUp()">SignUp
             </ion-button>
 
           </div>
           <div class="cen">
-            <ion-button size="large" type="submit" [disabled]="form.invalid" expand="block" (click)="login()">Login
+            <ion-button class="btn" size="large" type="submit" [disabled]="form.invalid" expand="block"
+              (click)="login()">Login
             </ion-button>
 
           </div>
           <div class="cen">
-            <ion-button size="large" expand="block" color="primary" (click)="loginWithFacebook()">
-              <ion-icon name="logo-facebook" class="logo"></ion-icon>
-              Login with Facebook
-            </ion-button>
-
-          </div>
-          <div class="cen">
-            <ion-button size="large" expand="block" color="danger" (click)="loginWithGoogle()">
+            <ion-button class="social" color="danger" (click)="loginWithGoogle()">
               <ion-icon class="logo" name="logo-google"></ion-icon>
-              Login with Google
+              Google
+            </ion-button>
+            <ion-button class="social" color="primary" (click)="loginWithFacebook()">
+              <ion-icon name="logo-facebook" class="logo"></ion-icon>
+              Facebook
             </ion-button>
 
           </div>
+
         </ion-col>
       </ion-row>
     </ion-grid>

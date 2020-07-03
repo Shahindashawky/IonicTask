@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../services/products.service';
 import { IonInfiniteScroll } from '@ionic/angular';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-tab1',
@@ -12,7 +13,7 @@ export class Tab1Page implements OnInit{
   items= [];
   page = 0;
   page_limit =24;
-  constructor(private productservice:ProductsService) {}
+  constructor(private productservice:ProductsService ,private _location :Location) {}
   ngOnInit() {
 
     this.loadData(false, "");
@@ -39,5 +40,7 @@ export class Tab1Page implements OnInit{
 doInfinite(event) {
   this.loadData(true, event);
 }
- 
+backClicked() {
+  this._location.back();
+}
 }
